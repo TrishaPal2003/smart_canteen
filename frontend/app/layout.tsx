@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
-  title: "Alchemist Canteen",
+  title: "CCN Canteen",
   description: "Smart canteen ordering system",
 };
 

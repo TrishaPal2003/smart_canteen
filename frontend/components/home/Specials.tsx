@@ -1,3 +1,9 @@
+
+import { faGift} from "@fortawesome/free-solid-svg-icons"
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 export default function Specials() {
   return (
     <section className="max-w-7xl mx-auto px-6 md:px-12 mb-24">
@@ -10,8 +16,9 @@ export default function Specials() {
         </div>
 
         <button className="text-[#006944] font-bold flex items-center gap-1">
-          See All <span className="material-symbols-outlined">arrow_forward</span>
-        </button>
+        See All
+        <FontAwesomeIcon icon={faArrowRight} />
+      </button>
       </div>
 
       {/* GRID */}
@@ -33,9 +40,10 @@ export default function Specials() {
             </div>
 
             <button className="bg-[#006944] text-white p-4 rounded-full">
-              <span className="material-symbols-outlined">
-                add_shopping_cart
-              </span>
+              <FontAwesomeIcon
+              icon={faCartPlus}
+              className="text-white"
+            />
             </button>
           </div>
         </div>
@@ -82,9 +90,10 @@ export default function Specials() {
           {/* MYSTERY BOX */}
           <div className="bg-[#70b5ff]/20 p-8 rounded-3xl border-2 border-dashed border-[#70b5ff]/30 flex flex-col justify-center items-center text-center hover:bg-[#70b5ff]/30 transition-colors">
 
-            <span className="material-symbols-outlined text-[#005e9f] text-4xl mb-4">
-              redeem
-            </span>
+            <FontAwesomeIcon
+            icon={faGift}
+            className="text-[#005e9f] text-4xl mb-4"
+          />
 
             <h4 className="font-bold">Mystery Box</h4>
             <p className="text-sm text-[#306554]">

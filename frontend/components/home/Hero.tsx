@@ -1,3 +1,7 @@
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUtensils } from "@fortawesome/free-solid-svg-icons"
+
 export default function Hero() {
   return (
     <section className="pt-24 pb-16 px-6 md:px-12 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -5,24 +9,26 @@ export default function Hero() {
       {/* LEFT */}
       <div className="space-y-8">
         <div className="inline-flex items-center gap-2 bg-[#b3f6dc] px-4 py-2 rounded-full">
-          <span className="material-symbols-outlined text-[#006944]">
-            restaurant
-          </span>
+          <FontAwesomeIcon icon={faUtensils} className="text-[#006944]" />
           <span className="text-sm font-semibold">
             Elevating Your Daily Fuel
           </span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight font-headline">
-          Where <span className="text-gradient">Culinary Art</span> Meets Smart Living.
-        </h1>
+        Where{" "}
+        <span className="bg-gradient-to-r from-[#006944] to-[#7efdbe] bg-clip-text text-transparent">
+          Culinary Art
+        </span>{" "}
+        Meets Smart Living.
+      </h1>
 
         <p className="text-lg text-[#306554] max-w-lg">
           Skip the queue, savor the flavor. Fresh ingredients, lightning-fast pick-up.
         </p>
 
         <div className="flex gap-4">
-          <button className="bg-[#006944] text-white px-8 py-4 rounded-full font-bold">
+          <button className="bg-gradient-to-r from-[#006944] to-[#00A86B] text-white px-8 py-4 rounded-full font-bold">
             Order Now
           </button>
           <button className="bg-[#a9f1d6] px-8 py-4 rounded-full font-bold">

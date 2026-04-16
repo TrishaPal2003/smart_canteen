@@ -1,3 +1,9 @@
+
+import { faMobileScreen } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCommentDots } from "@fortawesome/free-solid-svg-icons"
+import { faTags } from "@fortawesome/free-solid-svg-icons"
+
 export default function HowItWorks() {
   return (
     <section className="mb-24 bg-[#b3f6dc] rounded-[3rem] p-8 md:p-16 max-w-7xl mx-auto">
@@ -18,10 +24,11 @@ export default function HowItWorks() {
         {/* Step 1 */}
         <div className="text-center space-y-6">
           <div className="w-20 h-20 bg-surface-container-highest rounded-3xl flex items-center justify-center mx-auto">
-            <span className="material-symbols-outlined text-[#006944] text-4xl">
-              smartphone
-            </span>
-          </div>
+            <FontAwesomeIcon
+              icon={faMobileScreen}
+              className="text-[#006944] text-4xl"
+            />
+            </div>
           <h3 className="font-bold text-xl">Order & Pay</h3>
           <p className="text-[#306554] px-4">
             Browse our editorial menu and pay securely from your mobile device.
@@ -31,9 +38,10 @@ export default function HowItWorks() {
         {/* Step 2 */}
         <div className="text-center space-y-6">
           <div className="w-20 h-20 bg-surface-container-highest rounded-3xl flex items-center justify-center mx-auto">
-            <span className="material-symbols-outlined text-[#006944] text-4xl">
-              sms
-            </span>
+            <FontAwesomeIcon
+            icon={faCommentDots}
+            className="text-[#006944] text-4xl"
+          />
           </div>
           <h3 className="font-bold text-xl">Get Notified</h3>
           <p className="text-[#306554] px-4">
@@ -44,9 +52,10 @@ export default function HowItWorks() {
         {/* Step 3 */}
         <div className="text-center space-y-6">
           <div className="w-20 h-20 bg-surface-container-highest rounded-3xl flex items-center justify-center mx-auto">
-            <span className="material-symbols-outlined text-[#006944] text-4xl">
-              loyalty
-            </span>
+            <FontAwesomeIcon
+            icon={faTags}
+            className="bg-[#a9f1d6] text-[#006944] text-4xl"
+          />
           </div>
           <h3 className="font-bold text-xl">Earn Points</h3>
           <p className="text-[#306554] px-4">

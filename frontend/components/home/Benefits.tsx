@@ -1,3 +1,8 @@
+
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+
 export default function Benefits() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24 max-w-7xl mx-auto px-6 md:px-12">
@@ -12,23 +17,26 @@ export default function Benefits() {
 
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#7efdbe]">
-                check_circle
-              </span>
+              <FontAwesomeIcon
+              icon={faCircleCheck}
+              className="text-[#7efdbe]"
+            />
               Brain-fueling keto and vegan options
             </li>
 
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#7efdbe]">
-                check_circle
-              </span>
+              <FontAwesomeIcon
+              icon={faCircleCheck}
+              className="text-[#7efdbe]"
+            />
               Quiet pick-up zones near study halls
             </li>
 
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#7efdbe]">
-                check_circle
-              </span>
+              <FontAwesomeIcon
+                icon={faCircleCheck}
+                className="text-[#7efdbe]"
+              />
               Student-friendly pricing and loyalty tiers
             </li>
           </ul>
@@ -52,29 +60,32 @@ export default function Benefits() {
 
           <ul className="space-y-4 text-[#306554]">
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#006944]">
-                verified
-              </span>
+              <FontAwesomeIcon
+              icon={faCircleCheck}
+              className="text-[#006944]"
+            />
               Priority scheduling during peak lunch hours
             </li>
 
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#006944]">
-                verified
-              </span>
+              <FontAwesomeIcon
+              icon={faCircleCheck}
+              className="text-[#006944]"
+            />
               Corporate catering for department meetings
             </li>
 
             <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-[#006944]">
-                verified
-              </span>
+              <FontAwesomeIcon
+                icon={faCircleCheck}
+                className="text-[#006944]"
+              />
               Nutritional tracking for wellness
             </li>
           </ul>
         </div>
 
-        <button className="mt-10 bg-[#006944] text-white px-6 py-3 rounded-full font-bold w-fit">
+        <button className="mt-10 bg-gradient-to-r from-[#006944] to-[#00A86B] text-white px-6 py-3 rounded-full font-bold w-fit">
           Staff Portal
         </button>
       </div>
