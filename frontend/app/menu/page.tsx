@@ -9,8 +9,36 @@ export default function MenuPage() {
       {/* LEFT SIDE */}
       <section className="flex-1">
 
-        <h1 className="text-4xl font-extrabold mb-2">Daily Specials</h1>
-        <p className="text-gray-500 mb-10">Curated vitality for your work day.</p>
+        {/* HEADER */}
+        <h1 className="text-4xl font-extrabold mb-2">
+          Daily Specials
+        </h1>
+        <p className="text-gray-500 mb-6">
+          Curated vitality for your work day.
+        </p>
+
+        {/* FILTERS (INSERTED HERE) */}
+        <div className="flex gap-3 overflow-x-auto pb-4 mb-8 no-scrollbar">
+          <button className="bg-primary text-on-primary px-6 py-2 rounded-full font-medium shadow-lg whitespace-nowrap">
+            All Items
+          </button>
+
+          <button className="bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-full font-medium transition-colors whitespace-nowrap">
+            Breakfast
+          </button>
+
+          <button className="bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-full font-medium transition-colors whitespace-nowrap">
+            Lunch
+          </button>
+
+          <button className="bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-full font-medium transition-colors whitespace-nowrap">
+            Snacks
+          </button>
+
+          <button className="bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-full font-medium transition-colors whitespace-nowrap">
+            Drinks
+          </button>
+        </div>
 
         {/* GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
