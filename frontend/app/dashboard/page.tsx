@@ -1,3 +1,5 @@
+import Footer from "@/components/footer/Footer";
+
 export default function CustomerDashboardPage() {
   return (
     <main className="pt-24 pb-32 px-6 max-w-7xl mx-auto bg-background text-on-surface">
@@ -193,6 +195,7 @@ export default function CustomerDashboardPage() {
         </div>
 
       </div>
+      {/* <Footer /> */}
     </main>
   );
 }

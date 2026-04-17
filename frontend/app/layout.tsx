@@ -24,7 +24,7 @@ export default function RootLayout({
         <main className="flex-grow pt-16">{children}</main>
 
         {/* Footer (persistent) */}
-       
+       <Footer />
       </body>
     </html>
   );

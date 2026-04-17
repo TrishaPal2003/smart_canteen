@@ -1,5 +1,7 @@
+
+import Footer from "@/components/footer/Footer";
+
 export default function OrderPage() {
-// import Footer from '../../components/footer/Footer';
   return (
     <main className="flex-grow  pt-24 pb-12 px-4 md:px-8 max-w-7xl mx-auto w-full">
       
@@ -191,7 +193,8 @@ export default function OrderPage() {
         </aside>
 
       </div>
-      {/* </Footer> */}
+     
+      {/* <Footer /> */}
     </main>
   );
 }

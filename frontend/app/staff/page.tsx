@@ -1,11 +1,14 @@
+import Footer from "@/components/footer/Footer";
+
 export default function CustomerTrackingPage() {
   return (
-    <div className="flex min-h-screen bg-background text-on-surface">
+    <div className="flex flex-col min-h-screen bg-background text-on-surface">
 
       {/* SIDEBAR */}
+      <div className="flex flex-1">
       <aside className="
         hidden lg:flex
-        h-screen w-64 fixed left-0 top-0 z-40
+        h-screen w-64 left-0 top-0 z-40
         bg-emerald-50 dark:bg-slate-950
         border-r border-emerald-100 dark:border-emerald-900/30
         flex-col py-4 font-medium text-sm
@@ -175,6 +178,7 @@ export default function CustomerTrackingPage() {
 
         </div>
       </main>
+      </div>
 
       {/* FAB */}
       <button className="
@@ -185,7 +189,8 @@ export default function CustomerTrackingPage() {
       ">
         +
       </button>
-
+      {/* <Footer /> */}
     </div>
+    
   );
 }

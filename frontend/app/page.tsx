@@ -15,7 +15,7 @@ export default function HomePage() {
         <HowItWorks />
         <Benefits />
       </div>
-       <Footer />
+       {/* <Footer /> */}
     </main>
   );
 }

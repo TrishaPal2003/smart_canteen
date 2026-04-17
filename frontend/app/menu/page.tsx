@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { foods } from "@/data/foods";
+import Footer from "@/components/footer/Footer";
 
 export default function MenuPage() {
   return (
@@ -81,7 +82,7 @@ export default function MenuPage() {
 
         </div>
       </section>
-
+          {/* <Footer /> */}
     </main>
   );
 }
