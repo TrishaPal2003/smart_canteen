@@ -16,6 +16,7 @@ export default function Navbar() {
     { name: "Order", path: "/order" },
     { name: "Staff", path: "/staff" },
     { name: "Dashboard", path: "/dashboard" },
+    { name: "login", path: "/login" },
   ]
 
   const getClassName = (path: string) => {
