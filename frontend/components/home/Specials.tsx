@@ -27,15 +27,15 @@ export default function Specials() {
         {/* BIG CARD */}
         <div className="md:col-span-2 bg-white rounded-3xl overflow-hidden shadow">
           <img
-            src="/images/hero3.jpeg"
+            src="/images/halim.webp"
             className="h-80 w-full object-cover"
           />
 
           <div className="p-6 flex justify-between items-center">
             <div>
-              <p className="text-[#a83206] font-bold">$12.50 • 420 kcal</p>
+              <p className="text-[#a83206] font-bold">50 TK • 420 kcal</p>
               <h3 className="text-2xl font-bold">
-                Mediterranean Zen Plate
+                HALIM
               </h3>
             </div>
 
@@ -56,15 +56,15 @@ export default function Specials() {
             
             <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxVy-hCNM8P5otH-lOYZyNQnoWYCjt6LdfzSu_qU4xQm2qEebQ08Ago9DqF6KEassmlWD2Ddi96Jdgbh1VsV1ITM8RCtPPhY94CfWpcja2VHsCFs4E_qlQgeP9oHApLRuUKsZY5QcSX72bYGMu1kht2wH1DHVenZGK93zEhuNlcswbdHGVmp0ETt-UMWCYX08wuZMReNS9TEZOSr2_18agFL6-S2hXYrhELWa63By3gqexg7L9pEPiMC6FnyRLvUss4oAz30KWD3Ky"
+                src="https://static.toiimg.com/thumb/83740315.cms?imgsize=361903&width=800&height=800"
                 className="w-full h-full object-cover"
               />
             </div>
 
             <div>
-              <h4 className="font-bold">Citrus Kale Salad</h4>
+              <h4 className="font-bold">Sandwich</h4>
               <span className="text-[#a83206] font-bold text-sm">
-                $8.99
+                40 TK
               </span>
             </div>
           </div>
@@ -74,15 +74,15 @@ export default function Specials() {
 
             <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACkS7a9Xzz_EArO126ZCRa_m311kMimi9XTBC8Nz3nIZLMoKzAjpcO8k_IO32ADuZ4ItU78THpLPVkhsSa_gGSM82i98wD1VTMq2KLp9Wta64eLhlR1VrTsCqjhYrObi6RlLdD-hOCNZGyf3mnEnkyUpv90556CkXR0w0PasfS2zG8lybmENSxuxoLQIVS2klQBUyWy0u1x73D0jRg_rHPUtRWTyGVf13PCtBhhCMcey6IfotqO92fdWKhd7iZrZQWsZF_bEkWXNig"
+                src="https://www.bdgift.com/pp/iftar/somucha_s.jpg"
                 className="w-full h-full object-cover"
               />
             </div>
 
             <div>
-              <h4 className="font-bold">Nordic Salmon Roast</h4>
+              <h4 className="font-bold">Chomocha</h4>
               <span className="text-[#a83206] font-bold text-sm">
-                $14.25
+                10 TK
               </span>
             </div>
           </div>

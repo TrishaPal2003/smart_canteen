@@ -39,7 +39,7 @@ export default async function FoodDetailsPage({
         <div>
           <h1 className="text-4xl font-bold mb-4">{food.name}</h1>
           <p className="text-gray-500 mb-6">{food.description}</p>
-          <p className="text-2xl font-bold mb-6">${food.price}</p>
+          <p className="text-2xl font-bold mb-6">{food.price} TK</p>
 
           <button className="bg-green-600 text-white px-6 py-3 rounded-xl">
             Add to Cart

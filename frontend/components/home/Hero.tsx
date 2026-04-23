@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="relative">
         <div className="aspect-square rounded-[3rem] overflow-hidden rotate-3 shadow-2xl">
           <img
-            src="/images/hero6.webp"
+            src="/images/khichuri.webp"
             className="w-full h-full object-cover"
           />
         </div>

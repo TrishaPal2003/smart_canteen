@@ -33,7 +33,7 @@ export default function OrderPage() {
                 />
 
                 <div className="absolute top-4 right-4 bg-[#006944] px-3 py-1 rounded-full">
-                  <span className="text-white text-xs font-bold">$12.50</span>
+                  <span className="text-white text-xs font-bold">40 TK</span>
                 </div>
               </div>
 
@@ -70,7 +70,7 @@ export default function OrderPage() {
                 />
 
                 <div className="absolute top-4 right-4 bg-[#006944] px-3 py-1 rounded-full">
-                  <span className="text-white text-xs font-bold">$15.00</span>
+                  <span className="text-white text-xs font-bold">30 TK</span>
                 </div>
               </div>
 
@@ -159,17 +159,17 @@ export default function OrderPage() {
 
                 <div className="flex justify-between text-sm">
                   <span>Subtotal</span>
-                  <span>$21.50</span>
+                  <span>40 TK</span>
                 </div>
 
                 <div className="flex justify-between text-sm">
                   <span>VAT (5%)</span>
-                  <span>$1.08</span>
+                  <span>50 TK</span>
                 </div>
 
                 <div className="flex justify-between font-bold text-lg">
                   <span>Total</span>
-                  <span className="text-[#006944]">$22.58</span>
+                  <span className="text-[#006944]">90 TK</span>
                 </div>
 
               </div>

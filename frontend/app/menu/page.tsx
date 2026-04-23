@@ -70,7 +70,7 @@ export default function MenuPage() {
 
                     <div className="flex justify-between items-center mt-4">
                       <span className="text-xl font-bold">
-                        ${food.price}
+                        {food.price} TK
                       </span>
                     </div>
                   </div>

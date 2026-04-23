@@ -1,6 +1,16 @@
-import Footer from "@/components/footer/Footer";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTriangleExclamation, faHeadset, faRightFromBracket,faUtensils, faListCheck, faBoxesStacked } from "@fortawesome/free-solid-svg-icons"
+
 
 export default function CustomerTrackingPage() {
+
+  const navItems = [
+  { label: "Live Orders", icon: faListCheck },
+  { label: "Menu Editor", icon: faUtensils },
+  { label: "Inventory", icon: faBoxesStacked },
+  
+];
   return (
     <div className="flex flex-col min-h-screen bg-background text-on-surface">
 
@@ -18,7 +28,7 @@ export default function CustomerTrackingPage() {
         <div className="px-6 mb-8">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary">
-              <span className="material-symbols-outlined">restaurant</span>
+              <FontAwesomeIcon icon={faUtensils} className="text-[#006944]" />
             </div>
 
             <div>
@@ -32,34 +42,39 @@ export default function CustomerTrackingPage() {
         {/* NAV */}
         <nav className="flex-1 flex flex-col gap-1 px-2 overflow-y-auto">
 
-          {[
-            ["pending_actions", "Live Orders"],
-            ["restaurant_menu", "Menu Editor"],
-            ["inventory_2", "Inventory"],
-            ["badge", "Staff Schedule"],
-            ["query_stats", "Analytics"],
-          ].map(([icon, label]) => (
-            <a
-              key={label}
-              className="text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 rounded-lg mx-2 flex items-center gap-3 px-4 py-3 transition"
-            >
-              <span className="material-symbols-outlined">{icon}</span>
-              <span>{label}</span>
-            </a>
-          ))}
-        </nav>
+        {navItems.map(({ icon, label }) => (
+          <a
+            key={label}
+            className="text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 rounded-lg mx-2 flex items-center gap-3 px-4 py-3 transition"
+          >
+            <FontAwesomeIcon icon={icon} />
+            <span>{label}</span>
+          </a>
+        ))}
+
+      </nav>
 
         {/* FOOTER */}
         <div className="px-4 mt-auto flex flex-col gap-2">
+{/* 
+        <button className="w-full bg-red-500 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+          <FontAwesomeIcon icon={faTriangleExclamation} />
+          Emergency Stop
+        </button> */}
 
-          <button className="w-full bg-red-500 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
-            <span className="material-symbols-outlined">emergency</span>
-            Emergency Stop
-          </button>
+        <button className="w-full bg-green-800 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+          <FontAwesomeIcon icon={faHeadset} />
+          Support
+        </button>
 
-          <a className="px-4 py-3 text-emerald-700">Support</a>
-          <a className="px-4 py-3 text-emerald-700">Log Out</a>
-        </div>
+        <button className="w-full bg-red-600 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+        
+          <FontAwesomeIcon icon={faRightFromBracket} />
+          Log Out
+        
+        </button> 
+
+      </div>
       </aside>
 
       {/* MAIN */}
@@ -98,44 +113,123 @@ export default function CustomerTrackingPage() {
 
           {/* LEFT */}
           <div className="xl:col-span-2">
-            <h2 className="text-xl sm:text-2xl font-black mb-4 lg:mb-6">
-              Live Queue
-            </h2>
+  <div className="flex items-center justify-between mb-6">
+    <h2 className="text-2xl font-black text-on-surface">Live Queue</h2>
 
-            <div className="space-y-4">
+    <div className="flex gap-2">
+      <button className="bg-slate-400 px-4 py-2 rounded-full text-sm font-bold text-on-surface-variant hover:bg-surface-variant transition-colors">
+        All
+      </button>
 
-              {[
-                ["#4208", "Marcus Thorne", "Preparing", "blue"],
-                ["#4209", "Elara Vance", "Pending", "gray"],
-                ["#4205", "Julianne Moore", "Ready", "emerald"],
-              ].map(([id, name, status, color]) => (
-                <div
-                  key={id}
-                  className={`bg-white p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 border-l-8`}
-                >
-                  <div className="min-w-[80px] text-left sm:text-center">
-                    <p className="text-xs text-gray-500">Order</p>
-                    <p className="font-black">{id}</p>
-                  </div>
+      <button className="bg-white px-4 py-2 rounded-full text-sm font-bold text-on-surface shadow-sm border border-emerald-50">
+        Preparing (8)
+      </button>
 
-                  <div className="flex-1">
-                    <p className="font-bold">{name}</p>
-                    <p className="text-xs text-gray-500">
-                      12:42 PM • Est time
-                    </p>
-                  </div>
+      <button className="bg-white px-4 py-2 rounded-full text-sm font-bold text-on-surface shadow-sm border border-emerald-50">
+        Ready (3)
+      </button>
+    </div>
+  </div>
 
-                  <span className="px-3 py-1 rounded-full bg-gray-100 text-xs font-bold w-fit">
-                    {status}
-                  </span>
-                </div>
-              ))}
+  <div className="bg-surface-container-low rounded-3xl p-4 overflow-hidden">
+    <div className="space-y-4">
 
-            </div>
+      {/* Order Card 1 */}
+      <div className="bg-white p-5 rounded-2xl shadow-sm flex items-center gap-6 border-l-8 border-tertiary-container border-blue-400">
+        <div className="text-center min-w-[80px]">
+          <p className="text-[10px] font-bold text-on-surface-variant uppercase">Order ID</p>
+          <p className="text-lg font-black text-primary">#4208</p>
+        </div>
+
+        <div className="flex-1 ">
+          <div className="flex items-center gap-2 mb-1">
+            <h4 className="font-bold text-on-surface">Chotpoti</h4>
+            <span className="text-[10px] bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded font-bold uppercase">
+              Staff
+            </span>
           </div>
 
+          <div className="flex gap-4 text-xs text-on-surface-variant">
+            <span className="flex items-center gap-1">
+              <span className="material-symbols-outlined text-xs">schedule</span>
+              12:42 PM
+            </span>
+
+            <span className="flex items-center gap-1">
+              <span className="material-symbols-outlined text-xs">timer</span>
+              Est: 12:55 PM
+            </span>
+          </div>
+        </div>
+
+        <span className="flex items-center gap-2 px-3 py-1.5 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-bold animate-pulse">
+          <span className="w-2 h-2 bg-on-tertiary-container rounded-full"></span>
+          Preparing
+        </span>
+
+        <div className="flex gap-2">
+          <button className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+            <span className="material-symbols-outlined">check</span>
+          </button>
+
+          <button className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-secondary hover:text-white transition-all">
+            <span className="material-symbols-outlined">more_vert</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Order Card 2 */}
+      <div className="bg-white p-5 rounded-2xl shadow-sm flex items-center gap-6 border-l-8 border-blue-400">
+        <div className="text-center min-w-[80px]">
+          <p className="text-[10px] font-bold text-on-surface-variant uppercase">Order ID</p>
+          <p className="text-lg font-black text-primary">#4209</p>
+        </div>
+
+        <div className="flex-1">
+          <h4 className="font-bold text-on-surface">porota</h4>
+          <div className="flex gap-4 text-xs text-on-surface-variant">
+            <span className="flex items-center gap-1">
+              <span className="material-symbols-outlined text-xs">schedule</span>
+              12:45 PM
+            </span>
+          </div>
+        </div>
+
+        <span className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-full text-xs font-bold">
+          Pending
+        </span>
+
+        <button className="px-4 py-2 bg-primary text-on-primary rounded-full text-xs font-bold">
+          Mark as Preparing
+        </button>
+      </div>
+
+      {/* Order Card 3 */}
+      <div className="bg-emerald-50 p-5 rounded-2xl shadow-md flex items-center gap-6 border-2 border-primary ring-4 ring-primary/10">
+        <div className="text-center min-w-[80px]">
+          <p className="text-[10px] font-bold text-on-surface-variant uppercase">Order ID</p>
+          <p className="text-lg font-black text-primary">#4205</p>
+        </div>
+
+        <div className="flex-1">
+          <h4 className="font-bold text-on-surface">Khichuri</h4>
+        </div>
+
+        <span className="px-3 py-1.5 bg-primary-container rounded-full text-xs font-bold">
+          Ready
+        </span>
+
+        <button className="px-4 py-2 bg-secondary text-white rounded-full text-xs font-bold flex items-center gap-2">
+          <span className="material-symbols-outlined text-xs">sms</span>
+          Notify
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
           {/* RIGHT PANEL */}
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          {/* <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
 
             <div className="bg-emerald-600 text-white p-5 sm:p-6">
               <h3 className="text-lg sm:text-xl font-black">
@@ -174,7 +268,7 @@ export default function CustomerTrackingPage() {
               </button>
 
             </div>
-          </div>
+          </div> */}
 
         </div>
       </main>
