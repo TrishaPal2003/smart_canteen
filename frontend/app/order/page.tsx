@@ -28,7 +28,7 @@ export default function OrderPage() {
 
               <div className="h-48 overflow-hidden relative">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuABWuY3fWzExUqyCjned4M4KaGBqUfehso1DQTYS3i3HGRlQyfG_5ycJJ0QvzRl5ZPx4SKSp__iMlMbEprsCKnzvThmxsojllzOifS7r4Y30im3JXf8W_cJvzbMKzDMxWy2Tb6IpCAfQL03IGuDWWE56KFVJprXTyqund2JYZETid8bMNiTwJ9q_cuRY-v3_Rjtob-lIPXCyMcexiKduqHoJz9QAIIiJAvwOVBUfVReCzPpVeGVP6dg6zyyvL-nP7gjnzvQ7WMq5kZ8"
+                  src="https://i.ytimg.com/vi/xAXqPlWXgA8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLByLzJplv7TYFGrqGh1fLasACEG4Q"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
 
@@ -40,7 +40,7 @@ export default function OrderPage() {
               <div className="p-6">
 
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">Chlorophyll Harvest Bowl</h3>
+                  <h3 className="text-xl font-bold">Porota with daal baji</h3>
 
                   <div className="text-xs bg-[#ffc4b3]/30 px-2 py-1 rounded flex items-center gap-1">
                     <span className="material-symbols-outlined text-sm">bolt</span>
@@ -65,7 +65,7 @@ export default function OrderPage() {
 
               <div className="h-48 overflow-hidden relative">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdoI3Y26MrfzzV80in2DL-BsN-cHoG8XgvGjXPPQypd8XKnIfqW4nexjziB7TnG-NvLTkSJNNLmEw_3kUbh_tJde8C2lY7d3qofBWmoLp6AJ3ivNYTHa4ILFHUUGS1sSLgduFr2CW9VDBbmgBxw_P6PY1k5Y414FLF3XmIcuMcu1eZTwfk55oJbih8ssWW3IQHX3KoM45anMyiMtNbnGNKOV0M5hkHpOL3YFNS5vCPB6U5CpcVjo4pg7yiQoJ2lnwutAME4qS3hPYI"
+                  src="https://3.imimg.com/data3/UP/YK/MY-17273090/hakka-noddles.jpg"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
 
@@ -77,7 +77,7 @@ export default function OrderPage() {
               <div className="p-6">
 
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">Omega Vitality Salmon</h3>
+                  <h3 className="text-xl font-bold">Noddoles</h3>
 
                   <div className="text-xs bg-[#ffc4b3]/30 px-2 py-1 rounded flex items-center gap-1">
                     <span className="material-symbols-outlined text-sm">bolt</span>

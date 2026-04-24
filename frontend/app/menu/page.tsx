@@ -52,7 +52,7 @@ export default function MenuPage() {
 
                   <div className="w-1/3">
                     <Image
-                      src={food.image}
+                      src={food.image} unoptimized
                       alt={food.name}
                       width={300}
                       height={200}
