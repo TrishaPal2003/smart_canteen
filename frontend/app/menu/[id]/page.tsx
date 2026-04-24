@@ -33,7 +33,7 @@ export default async function FoodDetailsPage({
           alt={food.name}
           width={800}
           height={600}
-          className="rounded-3xl object-cover"
+          className="rounded-3xl object-cover "
         />
 
         <div>

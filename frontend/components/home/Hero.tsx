@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUtensils } from "@fortawesome/free-solid-svg-icons"
 
@@ -28,12 +28,18 @@ export default function Hero() {
         </p>
 
         <div className="flex gap-4">
+          
+
+        <Link href="/order">
           <button className="bg-gradient-to-r from-[#006944] to-[#00A86B] text-white px-8 py-4 rounded-full font-bold">
             Order Now
           </button>
+        </Link>
+        <Link href="/menu">
           <button className="bg-[#a9f1d6] px-8 py-4 rounded-full font-bold">
             View Menu
           </button>
+          </Link>
         </div>
       </div>
 

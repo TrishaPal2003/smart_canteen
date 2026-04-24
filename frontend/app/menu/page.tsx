@@ -1,9 +1,17 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { foods } from "@/data/foods";
-import Footer from "@/components/footer/Footer";
+import { useState } from "react";
 
 export default function MenuPage() {
+
+const [selectedCategory, setSelectedCategory] = useState("all");
+const filteredFoods =
+  selectedCategory === "all"
+    ? foods
+    : foods.filter((food) => food.category === selectedCategory);
+
   return (
     <main className="pt-24 pb-24 md:pb-12 px-4 md:px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
 
@@ -18,33 +26,68 @@ export default function MenuPage() {
           Curated vitality for your work day.
         </p>
 
-        {/* FILTERS (INSERTED HERE) */}
-        <div className="flex gap-3 overflow-x-auto pb-4 mb-8 no-scrollbar">
-          <button className="bg-primary text-on-primary px-6 py-2 rounded-full font-medium shadow-lg whitespace-nowrap">
-            All Items
-          </button>
+        {/* FILTERS */}
+<div className="flex gap-3 overflow-x-auto pb-4 mb-8 no-scrollbar">
+  <button
+    onClick={() => setSelectedCategory("all")}
+    className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition ${
+      selectedCategory === "all"
+        ? "bg-[#74e2ba] text-green-900"
+        : "bg-white border text-gray-600 hover:bg-gray-100"
+    }`}
+  >
+    All Items
+  </button>
 
-          <button className="bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-full font-medium transition-colors whitespace-nowrap">
-            Breakfast
-          </button>
+  <button
+    onClick={() => setSelectedCategory("breakfast")}
+    className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition ${
+      selectedCategory === "breakfast"
+        ? "bg-[#74e2ba] text-green-900"
+        : "bg-white border text-gray-600 hover:bg-gray-100"
+    }`}
+  >
+    Breakfast
+  </button>
 
-          <button className="bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-full font-medium transition-colors whitespace-nowrap">
-            Lunch
-          </button>
+  <button
+    onClick={() => setSelectedCategory("lunch")}
+    className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition ${
+      selectedCategory === "lunch"
+        ? "bg-[#74e2ba] text-green-900"
+        : "bg-white border text-gray-600 hover:bg-gray-100"
+    }`}
+  >
+    Lunch
+  </button>
 
-          <button className="bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-full font-medium transition-colors whitespace-nowrap">
-            Snacks
-          </button>
+  <button
+    onClick={() => setSelectedCategory("snacks")}
+    className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition ${
+      selectedCategory === "snacks"
+        ? "bg-[#74e2ba] text-green-900"
+        : "bg-white border text-gray-600 hover:bg-gray-100"
+    }`}
+  >
+    Snacks
+  </button>
 
-          <button className="bg-surface-container-highest text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container px-6 py-2 rounded-full font-medium transition-colors whitespace-nowrap">
-            Drinks
-          </button>
-        </div>
+  <button
+    onClick={() => setSelectedCategory("drinks")}
+    className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition ${
+      selectedCategory === "drinks"
+        ? "bg-[#74e2ba] text-green-900"
+        : "bg-white border text-gray-600 hover:bg-gray-100"
+    }`}
+  >
+    Drinks
+  </button>
+</div>
 
         {/* GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-          {foods.map((food) => (
+          {filteredFoods.map((food) => (
             <Link key={food.id} href={`/menu/${food.id}`}>
               <div className="bg-white p-5 rounded-3xl shadow hover:shadow-lg transition cursor-pointer">
 
@@ -56,7 +99,7 @@ export default function MenuPage() {
                       alt={food.name}
                       width={300}
                       height={200}
-                      className="w-full h-40 object-cover rounded-2xl"
+                      className="w-full h-40 object-cover rounded-2xl "
                     />
                   </div>
 
