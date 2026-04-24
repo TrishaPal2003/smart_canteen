@@ -29,7 +29,7 @@ export default async function FoodDetailsPage({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
         <Image
-          src={food.image}
+          src={food.image} unoptimized
           alt={food.name}
           width={800}
           height={600}
